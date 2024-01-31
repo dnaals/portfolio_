@@ -1,0 +1,287 @@
+@import url('https://fonts.googleapis.com/css2?family=Nothing+You+Could+Do&display=swap'); // noting you cloud do
+@import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); //Do Hyeon
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); //notosans
+
+* {
+
+    h1,
+    h2,
+    h3,
+    h4 {
+        margin: 0;
+    }
+
+    p {
+        margin: 0;
+    }
+
+    li {
+        list-style: none;
+
+    }
+
+    a {
+        text-decoration: none;
+        color: #000000;
+    }
+}
+
+#root {
+    .arrow {
+        margin: 50px 0 50px 50%;
+        cursor: pointer;
+    }
+
+    width:100%;
+
+    header {
+        padding: 10px 0 0 144px;
+        position: fixed;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 100%;
+        color: #FFFFFF;
+        background-color: #0049F8;
+        height: 60px;
+
+        .h_name {
+            font-size: 40px;
+            font-family: 'Nothing You Could Do';
+            font-weight: 700;
+            cursor: pointer;
+        }
+
+        nav {
+            display: flex;
+            padding-right: 290px;
+            gap: 25px;
+            font-size: 20px;
+            font-family: 'Do Hyeon', sans-serif;
+
+            p {
+                opacity: 0.5;
+                cursor: pointer;
+            }
+        }
+
+
+    }
+
+    .S_home {
+        // background: url('../public/images/sign.png'), no-repeat, #0049F8;
+        background-image: url('../public/images/sign.png');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-color: #0049F8;
+        color: #FFFFFF;
+        font-family: 'Do Hyeon', sans-serif;
+
+        main {
+            padding-top: 234px;
+            padding-left: 419px;
+
+            // width: 100%;
+            .line {
+                border-bottom: 1px solid rgba(255, 255, 255, 0.4);
+                width: 90%;
+            }
+
+            p {
+                width: 90%;
+            }
+
+            p:nth-of-type(1) {
+                font-size: 100px;
+                margin-bottom: 74px;
+
+                span {
+                    background-color: yellow;
+                    color: #0049F8
+                }
+            }
+
+            p:nth-of-type(2) {
+
+                // border-top: 1px solid rgba(255, 255, 255, 0.4);
+                font-size: 20px;
+                font-family: 'Noto Sans KR', sans-serif;
+                color: rgba(255, 255, 255, 0.80);
+                padding-top: 25px;
+            }
+
+
+        }
+    }
+
+    .S_about {
+        main {
+            padding: 175px 0 0 419px;
+            color: #0049F8;
+
+            h1 {
+                font-family: 'Do Hyeon', sans-serif;
+                font-size: 100px;
+            }
+
+            p {
+                font-family: 'Noto Sans KR', sans-serif;
+                font-size: 24px;
+                color: #000000;
+                margin-top: 20px;
+
+                span {
+                    font-weight: 700;
+                    color: #0049F8;
+                    border-bottom: 1px solid #0049F8;
+                }
+            }
+
+            .introduce {
+                display: flex;
+                margin-top: 153px;
+                align-items: end;
+
+                img {
+                    width: 550px;
+                    height: 360px;
+                }
+
+                ul {
+                    color: #000000;
+                    font-size: 24px;
+                    font-family: 'Noto Sans KR', sans-serif;
+                    margin-left: 50px;
+
+                    li {
+                        padding: 5px 0;
+                        list-style: disc;
+                    }
+                }
+            }
+        }
+    }
+
+    .S_skill {
+        background-color: #ECF2FF;
+        color: #0049F8;
+
+        main {
+            padding: 175px 0 0 419px;
+            font-family: 'Do Hyeon', sans-serif;
+
+            h1 {
+                font-size: 100px;
+                // margin-bottom: 85px;
+            }
+
+            .familiar {
+                border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+
+                .familiar_img {
+                    img {
+                        margin: 50px 50px;
+                    }
+                }
+            }
+
+            .tried {
+                .tried_img {
+                    img {
+                        margin: 50px 60px
+                    }
+                }
+            }
+
+            .familiar,
+            .tried {
+                margin-top: 85px;
+                margin-left: 50px;
+                width: 70%;
+
+                .familiar_img,
+                .tried_img {
+                    text-align: center;
+                }
+
+                p {
+                    font-size: 40px;
+                    color: #000000;
+                }
+            }
+
+
+        }
+    }
+
+    .S_project {
+        main {
+            padding: 175px 0 0 419px;
+            color: #0049F8;
+
+            h1 {
+                font-size: 100px;
+                font-family: 'Do Hyeon', sans-serif;
+                margin-bottom: 50px;
+            }
+
+            .my_project_lt {
+                margin: 100px 0;
+
+                p {
+                    text-align: right;
+                }
+            }
+
+            .my_project_lt,
+            .my_project_rt {
+                display: flex;
+                gap: 70px;
+                align-items: center;
+
+                img {}
+
+                p {
+                    color: #000000;
+                    font-size: 20px;
+
+                    span {
+                        font-size: 50px;
+                    }
+                }
+            }
+        }
+    }
+
+    .S_contact {
+        background: url("../public/images/me.png") no-repeat;
+        background-position: -500px 200px;
+        height: 1300px;
+        // background-image: url('../public/images/me.png');
+
+
+        background-color: #0049F8;
+        color: #ECF2FF;
+
+        main {
+            padding: 175px 0 0 419px;
+
+            h1 {
+                font-size: 100px;
+                font-family: 'Do Hyeon', sans-serif;
+            }
+
+            p {
+                font-size: 24px;
+                margin: 42px 0;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+
+            a {
+                font-size: 24px;
+                color: #FFFFFF;
+                font-family: 'Noto Sans KR', sans-serif;
+            }
+        }
+    }
+}
