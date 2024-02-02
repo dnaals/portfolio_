@@ -7,26 +7,47 @@
     h1,
     h2,
     h3,
-    h4 {
-        margin: 0;
-    }
-
+    h4,
     p {
         margin: 0;
     }
 
     li {
         list-style: none;
-
     }
 
     a {
         text-decoration: none;
         color: #000000;
     }
+
+    .S_home,
+    .S_about,
+    .S_skill,
+    .S_project,
+    .S_contact {
+        width: 100%;
+    }
+
+    .S_home_main,
+    .S_about_main,
+    .S_skill_main,
+    .S_project_main,
+    .S_contact_main {
+        padding-top: 175px;
+        margin-left: 20%;
+
+        h1 {
+            font-size: 7vw;
+        }
+    }
 }
 
+
 #root {
+
+
+
     .arrow {
         margin: 50px 0 50px 50%;
         cursor: pointer;
@@ -54,7 +75,7 @@
 
         nav {
             display: flex;
-            padding-right: 290px;
+            margin-right: 290px;
             gap: 25px;
             font-size: 20px;
             font-family: 'Do Hyeon', sans-serif;
@@ -77,11 +98,9 @@
         color: #FFFFFF;
         font-family: 'Do Hyeon', sans-serif;
 
-        main {
-            padding-top: 234px;
-            padding-left: 419px;
 
-            // width: 100%;
+        .S_home_main {
+
             .line {
                 border-bottom: 1px solid rgba(255, 255, 255, 0.4);
                 width: 90%;
@@ -92,7 +111,7 @@
             }
 
             p:nth-of-type(1) {
-                font-size: 100px;
+                font-size: 6vw;
                 margin-bottom: 74px;
 
                 span {
@@ -104,7 +123,7 @@
             p:nth-of-type(2) {
 
                 // border-top: 1px solid rgba(255, 255, 255, 0.4);
-                font-size: 20px;
+                font-size: 1vw;
                 font-family: 'Noto Sans KR', sans-serif;
                 color: rgba(255, 255, 255, 0.80);
                 padding-top: 25px;
@@ -115,18 +134,16 @@
     }
 
     .S_about {
-        main {
-            padding: 175px 0 0 419px;
+        .S_about_main {
             color: #0049F8;
 
             h1 {
                 font-family: 'Do Hyeon', sans-serif;
-                font-size: 100px;
             }
 
             p {
                 font-family: 'Noto Sans KR', sans-serif;
-                font-size: 24px;
+                font-size: 1.3vw;
                 color: #000000;
                 margin-top: 20px;
 
@@ -142,14 +159,18 @@
                 margin-top: 153px;
                 align-items: end;
 
-                img {
-                    width: 550px;
-                    height: 360px;
+                p {
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                        height: 360px;
+                    }
                 }
 
                 ul {
                     color: #000000;
-                    font-size: 24px;
+                    font-size: 1.2vw;
                     font-family: 'Noto Sans KR', sans-serif;
                     margin-left: 50px;
 
@@ -166,14 +187,8 @@
         background-color: #ECF2FF;
         color: #0049F8;
 
-        main {
-            padding: 175px 0 0 419px;
+        .S_skill_main {
             font-family: 'Do Hyeon', sans-serif;
-
-            h1 {
-                font-size: 100px;
-                // margin-bottom: 85px;
-            }
 
             .familiar {
                 border-bottom: 1px solid rgba(0, 0, 0, 0.1);
@@ -205,7 +220,7 @@
                 }
 
                 p {
-                    font-size: 40px;
+                    font-size: 2.5vw;
                     color: #000000;
                 }
             }
@@ -215,12 +230,11 @@
     }
 
     .S_project {
-        main {
-            padding: 175px 0 0 419px;
+        .S_project_main {
             color: #0049F8;
 
             h1 {
-                font-size: 100px;
+
                 font-family: 'Do Hyeon', sans-serif;
                 margin-bottom: 50px;
             }
@@ -228,8 +242,35 @@
             .my_project_lt {
                 margin: 100px 0;
 
-                p {
+                p:nth-child(1) {
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                    }
+                }
+
+                p:nth-child(2) {
+                    font-size: 1vw;
                     text-align: right;
+                }
+
+            }
+
+            .my_project_rt {
+                p:nth-child(1) {
+
+                    font-size: 1vw;
+                    text-align: left;
+                }
+
+                p:nth-child(2) {
+
+                    width: 40%;
+
+                    img {
+                        width: 100%;
+                    }
                 }
             }
 
@@ -254,8 +295,8 @@
     }
 
     .S_contact {
-        background: url("../public/images/me.png") no-repeat;
-        background-position: -500px 200px;
+        background: url("../public/images/me.png") center 250px / 150% no-repeat;
+        // background-position: -500px 200px;
         height: 1300px;
         // background-image: url('../public/images/me.png');
 
@@ -263,24 +304,29 @@
         background-color: #0049F8;
         color: #ECF2FF;
 
-        main {
-            padding: 175px 0 0 419px;
+        .S_contact_main {
 
             h1 {
-                font-size: 100px;
+
                 font-family: 'Do Hyeon', sans-serif;
             }
 
             p {
-                font-size: 24px;
+                font-size: 1vw;
                 margin: 42px 0;
                 font-family: 'Noto Sans KR', sans-serif;
             }
 
             a {
-                font-size: 24px;
+                font-size: 1vw;
                 color: #FFFFFF;
                 font-family: 'Noto Sans KR', sans-serif;
+
+
+                img {
+                    width: 2%;
+                }
+
             }
         }
     }
