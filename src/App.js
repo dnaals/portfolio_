@@ -15,6 +15,7 @@ function App() {
   const [headScroll, setheadScroll] = useState('');
   const [menuScroll, setMenuScroll] = useState([]);
 
+  window.onresize = imageLoad;
 
   function imageLoad() {
     let menuBound = [
@@ -53,7 +54,7 @@ function App() {
       return 2;
     } else if (scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) {
       return 1;
-    } else if (scrollPosition > menuScroll[4]) {
+    } else if (scrollPosition >= menuScroll[4]) {
       return 0;
     }
   }
@@ -61,13 +62,6 @@ function App() {
     menu.scrollIntoView({ behavior: "smooth" });
   }
 
-
-
-
-  const a = () => {
-    console.log("menu", menuScroll)
-    console.log(scrollPosition)
-  }
   const headColor = [
     { backgroundColor: '#0049F8', color: '#FFFFFF' },
     { backgroundColor: '#FFFFFF', color: '#0049F8' },
@@ -110,7 +104,7 @@ function App() {
         }}
         ref={(el) => { menuRef.current[1] = el }} className='S_about'>
         <div className='S_about_main'>
-          <h1 onClick={() => a()}>ABOUT</h1>
+          <h1>ABOUT</h1>
           <p>새로운 일에 거부감없이 적응하며, 바른 인성을 갖추기 위해 노력하고,<br />
             BackEnd에도 관심을 가지는 등, 분야를 가리지 않고 적극적으로 개발에 대한 관심사를 넓혀나가고 있습니다.<br /><br />
             <span>" 포기하지 않으면 어떤일이든 해낼수있다. "</span><br /><br />
@@ -133,7 +127,7 @@ function App() {
 
       <section ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
         <div className='S_skill_main'>
-          <h1 onClick={() => a()}>SKILL</h1>
+          <h1>SKILL</h1>
           <div className='familiar'>
             <p>Familiar</p>
             <div className='familiar_img'>
@@ -161,7 +155,7 @@ function App() {
 
       <section ref={(el) => { menuRef.current[3] = el }} className='S_project'>
         <div className='S_project_main'>
-          <h1 onClick={() => a()}>PROJECT</h1>
+          <h1>PROJECT</h1>
           <div className='my_project_lt'>
             <p><img src='./images/happypub.png' /></p>
             <p><span>Happy Pub</span><br /><br />
@@ -178,13 +172,21 @@ function App() {
             </p>
             <p><img src='./images/happypub.png' /></p>
           </div>
+          <div className='my_project_lt'>
+            <p><img src='./images/happypub.png' /></p>
+            <p><span>Happy Pub</span><br /><br />
+              첫번째 Team Project 주류판매 사이트입니다.<br /><br />
+              기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br /><br />
+              디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다.
+            </p>
+          </div>
         </div>
         <img onClick={() => menuclick(menuRef.current[4])} className='arrow' src='./images/downBlue.png' />
       </section>
 
       <section ref={(el) => { menuRef.current[4] = el }} className='S_contact'>
         <div className='S_contact_main'>
-          <h1 onClick={() => a()}>CONTACT US</h1>
+          <h1>CONTACT US</h1>
           <p>"열정, 성실, 올바른 인성"을 중심으로 포기하지않고 노력하는 개발자가 되겠습니다.</p>
           <a href='https://naver.com'>이력서 다운로드 <img src='./images/rightarrow.png' /> </a>
 

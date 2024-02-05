@@ -217,6 +217,10 @@
                 .familiar_img,
                 .tried_img {
                     text-align: center;
+
+                    img {
+                        cursor: pointer;
+                    }
                 }
 
                 p {
@@ -224,7 +228,6 @@
                     color: #000000;
                 }
             }
-
 
         }
     }
@@ -280,7 +283,14 @@
                 gap: 70px;
                 align-items: center;
 
-                img {}
+                img {
+                    transition: 1s;
+                }
+
+                img:hover {
+                    transform: perspective(600px) rotateY(180deg);
+
+                }
 
                 p {
                     color: #000000;
