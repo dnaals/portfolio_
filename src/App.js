@@ -1,6 +1,8 @@
 import { useEffect, useRef, useState } from 'react';
 import './pofol.scss'
 import { motion } from 'framer-motion';
+import Project from './comp/Project';
+import Skill from './comp/Skill';
 function App() {
 
   const menuRef = useRef([]);
@@ -12,7 +14,6 @@ function App() {
 
 
   // let headScroll = headRef.current.getBoundingClientRect().bottom;
-  const [headScroll, setheadScroll] = useState('');
   const [menuScroll, setMenuScroll] = useState([]);
 
   window.onresize = imageLoad;
@@ -25,10 +26,8 @@ function App() {
       menuRef.current[3].offsetTop,
       menuRef.current[4].offsetTop
     ];
-    let headBound = headRef.current.getBoundingClientRect().bottom;
 
     setMenuScroll(menuBound);
-    setheadScroll(headBound);
 
     window.addEventListener("scroll", updateScroll);
   }
@@ -67,6 +66,7 @@ function App() {
     { backgroundColor: '#FFFFFF', color: '#0049F8' },
     { backgroundColor: '#ECF2FF', color: '#0049F8' }
   ];
+
   return (
     <>
       <header ref={headRef} style={headColor[scrollBack()]}>
@@ -112,7 +112,7 @@ function App() {
             계속 다양하게 변하는 웹개발 트랜드 속에서, 어떤 어려움 속에서도 포기하지않으며<br />
             다양한 시도와 함께 사용자 입장을 고려하며, 성실하게 발전하는 개발자가 되겠습니다.</p>
           <div className='introduce'>
-            <p><img src='/images/img1.PNG' /></p>
+            <p><img src='/images/img1.png' /></p>
             <ul>
               <li>송우민</li>
               <li>1996.01.05</li>
@@ -128,8 +128,11 @@ function App() {
       <section ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
         <div className='S_skill_main'>
           <h1>SKILL</h1>
-          <div className='familiar'>
+          <Skill />
+          {/* <div className='familiar'>
             <p>Familiar</p>
+            <div className='familiar_text'>
+            </div>
             <div className='familiar_img'>
               <img src='./images/html.png' />
               <img src='./images/css3.png' />
@@ -148,7 +151,7 @@ function App() {
               <img src='./images/typescript.png' />
               <img src='./images/github.png' />
             </div>
-          </div>
+          </div> */}
         </div>
         <img onClick={() => menuclick(menuRef.current[3])} className='arrow' src='./images/downBlue.png' />
       </section>
@@ -156,30 +159,7 @@ function App() {
       <section ref={(el) => { menuRef.current[3] = el }} className='S_project'>
         <div className='S_project_main'>
           <h1>PROJECT</h1>
-          <div className='my_project_lt'>
-            <p><img src='./images/happypub.png' /></p>
-            <p><span>Happy Pub</span><br /><br />
-              첫번째 Team Project 주류판매 사이트입니다.<br /><br />
-              기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br /><br />
-              디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다.
-            </p>
-          </div>
-          <div className='my_project_rt'>
-            <p><span>Happy Pub</span><br /><br />
-              첫번째 Team Project 주류판매 사이트입니다.<br /><br />
-              기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br /><br />
-              디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다.
-            </p>
-            <p><img src='./images/happypub.png' /></p>
-          </div>
-          <div className='my_project_lt'>
-            <p><img src='./images/happypub.png' /></p>
-            <p><span>Happy Pub</span><br /><br />
-              첫번째 Team Project 주류판매 사이트입니다.<br /><br />
-              기존 술마켓 각각의 온라인 판매 사이트를 참고하여<br /><br />
-              디자인의 재구성과 기능들의 활성화를 목표로 작업하였습니다.
-            </p>
-          </div>
+          <Project />
         </div>
         <img onClick={() => menuclick(menuRef.current[4])} className='arrow' src='./images/downBlue.png' />
       </section>
