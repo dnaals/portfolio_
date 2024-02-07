@@ -1,6 +1,6 @@
-import React, { useState } from 'react';
+import React, { useEffect, useRef, useState } from 'react';
 
-function Project(props) {
+function Project({ mouseE, mouseO }) {
     const data = [
         {
             idx: 0,
@@ -32,8 +32,18 @@ function Project(props) {
         }
     ]   // 프로젝트 추가할때 여기에 하면됨
 
-    const [check, setCheck] = useState(null);
+    // const [xmouse, setXmouse] = useState();
+    // const [ymouse, setYmouse] = useState();
 
+    // const mouseE = (e) => {
+    //     console.log(e)
+    //     setXmouse(e.nativeEvent.offsetX);
+    //     setYmouse(e.nativeEvent.offsetY);
+    // }
+
+
+
+    const [check, setCheck] = useState(null);
     const p_click = (k) => {
         if (check == null) {
             setCheck(k);
@@ -49,8 +59,10 @@ function Project(props) {
             {
                 data.map((obj, k) => (
                     <div className='my_project_lt' key={k}>
-                        <div className={`rotate ${check == k ? 'rotate active' : ''}`} onClick={() => { p_click(k) }}>
-                            <p><img src={`./images/${obj.img}`} /></p>
+                        <div className={`rotate ${check == k ? 'active' : ''}`} onClick={() => { p_click(k) }}>
+                            <p><img src={`./images/${obj.img}`} onMouseMove={(e) => { mouseE(e) }} onMouseOut={() => { mouseO() }} />
+                                {/* <sapn className='circle' style={{ top: ymouse, left: xmouse }} >click</sapn> */}
+                            </p>
                             <p>{obj.b_contants}</p>
                         </div>
                         <p><span>{obj.title}</span><br /><br />

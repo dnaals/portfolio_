@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Skill(props) {
 
@@ -72,8 +72,27 @@ function Skill(props) {
             src: 'github.png'
         }
     ]
-    const imgClick = () => {
-        console.log('a')
+
+    const [fnum, setFnum] = useState(null);
+    const fimgClick = (key) => {
+        if (fnum == null) {
+            setFnum(key);
+        } else if (fnum != key) {
+            setFnum(key);
+        } else if (fnum == key) {
+            setFnum(null);
+        }
+    }
+
+    const [tnum, setTnum] = useState(null);
+    const timgClick = (key) => {
+        if (tnum == null) {
+            setTnum(key);
+        } else if (tnum != key) {
+            setTnum(key);
+        } else if (tnum == key) {
+            setTnum(null);
+        }
     }
     return (
         <>
@@ -82,22 +101,28 @@ function Skill(props) {
                 <div className='familiar_img'>
                     {
                         familiarSkill.map((obj, k) => (
-                            <>
-                                <img src={`./images/${obj.src}`} onClick={() => { imgClick() }} />
-                                <div className='familiar_text'>
+                            <span key={k}>
+                                <img src={`./images/${obj.src}`} style={fnum == k ? { opacity: 1 } : {}} onClick={() => { fimgClick(k) }} />
+                                <div className={`familiar_text ${fnum == k ? 'active' : ''}`}>
                                     <p>{obj.contants}</p>
                                 </div>
-                            </>
+                            </span>
                         ))
                     }
                 </div>
             </div>
+
             <div className='tried'>
                 <p>Tried</p>
                 <div className='tried_img'>
                     {
-                        triedSkill.map((obj) => (
-                            <img src={`./images/${obj.src}`} />
+                        triedSkill.map((obj, k) => (
+                            <span key={k}>
+                                <img src={`./images/${obj.src}`} style={tnum == k ? { opacity: 1 } : {}} onClick={() => { timgClick(k) }} />
+                                <div className={`tried_text ${tnum == k ? 'active' : ''}`}>
+                                    <p>{obj.contants}</p>
+                                </div>
+                            </span>
                         ))
                     }
                 </div>

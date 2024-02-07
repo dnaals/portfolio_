@@ -12,8 +12,6 @@ function App() {
     setScrollPosition(window.scrollY);
   }
 
-
-  // let headScroll = headRef.current.getBoundingClientRect().bottom;
   const [menuScroll, setMenuScroll] = useState([]);
 
   window.onresize = imageLoad;
@@ -43,8 +41,6 @@ function App() {
 
 
   const scrollBack = () => {
-    // console.log("head", headScroll)
-    // console.log("menu", menuScroll)
     if (scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) {
       return 0;
     } else if (scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) {
@@ -67,6 +63,18 @@ function App() {
     { backgroundColor: '#ECF2FF', color: '#0049F8' }
   ];
 
+  const [xmouse, setXmouse] = useState();
+  const [ymouse, setYmouse] = useState();
+
+  const mouseE = (e) => {
+    setXmouse(e.pageX);
+    setYmouse(e.pageY);
+  }
+  const mouseO = () => {
+    setXmouse(-100)
+    setYmouse(-100)
+  }
+
   return (
     <>
       <header ref={headRef} style={headColor[scrollBack()]}>
@@ -79,6 +87,7 @@ function App() {
           <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
         </nav>
       </header>
+      <div className='circle' style={{ top: ymouse, left: xmouse }} >click</div>
 
       <section ref={(el) => { menuRef.current[0] = el }} className='S_home'>
         <div className='S_home_main'>
@@ -129,29 +138,7 @@ function App() {
         <div className='S_skill_main'>
           <h1>SKILL</h1>
           <Skill />
-          {/* <div className='familiar'>
-            <p>Familiar</p>
-            <div className='familiar_text'>
-            </div>
-            <div className='familiar_img'>
-              <img src='./images/html.png' />
-              <img src='./images/css3.png' />
-              <img src='./images/sass.png' />
-              <img src='./images/javascript.png' />
-              <img src='./images/react.png' />
-            </div>
-          </div>
-          <div className='tried'>
-            <p>Tried</p>
-            <div className='tried_img'>
-              <img src='./images/next.png' />
-              <img src='./images/mong.png' />
-              <img src='./images/jquery.png' />
-              <img src='./images/figma.png' />
-              <img src='./images/typescript.png' />
-              <img src='./images/github.png' />
-            </div>
-          </div> */}
+
         </div>
         <img onClick={() => menuclick(menuRef.current[3])} className='arrow' src='./images/downBlue.png' />
       </section>
@@ -159,7 +146,7 @@ function App() {
       <section ref={(el) => { menuRef.current[3] = el }} className='S_project'>
         <div className='S_project_main'>
           <h1>PROJECT</h1>
-          <Project />
+          <Project mouseE={mouseE} mouseO={mouseO} />
         </div>
         <img onClick={() => menuclick(menuRef.current[4])} className='arrow' src='./images/downBlue.png' />
       </section>
@@ -169,7 +156,6 @@ function App() {
           <h1>CONTACT US</h1>
           <p>"열정, 성실, 올바른 인성"을 중심으로 포기하지않고 노력하는 개발자가 되겠습니다.</p>
           <a href='https://naver.com'>이력서 다운로드 <img src='./images/rightarrow.png' /> </a>
-
         </div>
       </section>
 
