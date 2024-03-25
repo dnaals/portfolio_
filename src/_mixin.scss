@@ -1,0 +1,21 @@
+$mobile: 480px;
+$pad: 768px;
+$pad2 : 1024px;
+
+@mixin mobile {
+    @media(max-width:$mobile) {
+        @content;
+    }
+}
+
+@mixin pad {
+    @media(min-width:$mobile) and (max-width:$pad) {
+        @content;
+    }
+}
+
+@mixin pad2 {
+    @media(min-width:$pad) and (max-width:$pad2) {
+        @content;
+    }
+}

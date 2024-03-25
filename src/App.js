@@ -79,6 +79,11 @@ function App() {
     <>
       <header ref={headRef} style={headColor[scrollBack()]}>
         <p onClick={() => { menuclick(menuRef.current[0]) }} className='h_name'>Songwoomin</p>
+        <div className='burger_menu'>
+          <span>ㅡ</span>
+          <span>ㅡ</span>
+          <span>ㅡ</span>
+        </div>
         <nav>
           <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
           <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>

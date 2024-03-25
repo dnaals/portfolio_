@@ -47,12 +47,12 @@ function Skill(props) {
             contants: 'MongoDB에 대한 설명입니다.',
             src: 'mong.png'
         },
-        {
-            idx: 2,
-            name: "Jquery",
-            contants: 'jquery에 대한 설명입니다.',
-            src: 'jquery.png'
-        },
+        // {
+        //     idx: 2,
+        //     name: "Jquery",
+        //     contants: 'jquery에 대한 설명입니다.',
+        //     src: 'jquery.png'
+        // },
         {
             idx: 3,
             name: "Figma",
@@ -101,12 +101,12 @@ function Skill(props) {
                 <div className='familiar_img'>
                     {
                         familiarSkill.map((obj, k) => (
-                            <span key={k}>
+                            <div key={k}>
                                 <img src={`./images/${obj.src}`} style={fnum == k ? { opacity: 1 } : {}} onClick={() => { fimgClick(k) }} />
                                 <div className={`familiar_text ${fnum == k ? 'active' : ''}`}>
                                     <p>{obj.contants}</p>
                                 </div>
-                            </span>
+                            </div>
                         ))
                     }
                 </div>
@@ -117,12 +117,12 @@ function Skill(props) {
                 <div className='tried_img'>
                     {
                         triedSkill.map((obj, k) => (
-                            <span key={k}>
+                            <div key={k}>
                                 <img src={`./images/${obj.src}`} style={tnum == k ? { opacity: 1 } : {}} onClick={() => { timgClick(k) }} />
                                 <div className={`tried_text ${tnum == k ? 'active' : ''}`}>
                                     <p>{obj.contants}</p>
                                 </div>
-                            </span>
+                            </div>
                         ))
                     }
                 </div>
