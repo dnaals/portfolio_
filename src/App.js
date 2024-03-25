@@ -3,6 +3,7 @@ import './pofol.scss'
 import { motion } from 'framer-motion';
 import Project from './comp/Project';
 import Skill from './comp/Skill';
+import Contact from './comp/Contact';
 function App() {
 
   const menuRef = useRef([]);
@@ -84,6 +85,13 @@ function App() {
           <span>ㅡ</span>
           <span>ㅡ</span>
         </div>
+        <div className='burger_list'>
+          <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
+          <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
+          <p onClick={() => menuclick(menuRef.current[2])} style={(scrollPosition >= menuScroll[2] && scrollPosition < menuScroll[3]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}> SKILL</p>
+          <p onClick={() => menuclick(menuRef.current[3])} style={(scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}} >PROJECT</p>
+          <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
+        </div>
         <nav>
           <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
           <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
@@ -92,7 +100,7 @@ function App() {
           <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
         </nav>
       </header>
-      <div className='circle' style={{ top: ymouse, left: xmouse }} >click</div>
+      <div className='circle' style={{ top: ymouse, left: xmouse }} >Link</div>
 
       <section ref={(el) => { menuRef.current[0] = el }} className='S_home'>
         <div className='S_home_main'>
@@ -162,6 +170,7 @@ function App() {
           <p>"열정, 성실, 올바른 인성"을 중심으로 포기하지않고 노력하는 개발자가 되겠습니다.</p>
           <a href='https://naver.com'>이력서 다운로드 <img src='./images/rightarrow.png' /> </a>
         </div>
+        <Contact/>
       </section>
 
     </>

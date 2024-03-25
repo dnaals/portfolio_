@@ -2,6 +2,10 @@
 @import url('https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap'); //Do Hyeon
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap'); //notosans
 @import "_mixin.scss";
+@keyframes motion {
+	0% {margin-left: -100px; }
+	100% {margin-left: 100px; }
+}
 * {
 
     h1,
@@ -39,7 +43,7 @@
         width: 60%;
 
         h1 {
-            font-size: 4.5vw;
+            font-size: 100px;
         }
     }
 }
@@ -47,6 +51,7 @@
 //1024~1920
 #root {
     width: 100%;
+
     .circle {
         position: absolute;
         top: -100px;
@@ -80,19 +85,30 @@
         background-color: #0049F8;
         height: 60px;
         z-index: 1;
-        .burger_menu{
+
+        .burger_menu {
             position: relative;
             font-size: 30px;
-            span{
-                position:absolute;
+
+            span {
+                position: absolute;
             }
-            span:nth-of-type(1){
+
+            span:nth-of-type(1) {
                 transform: translateY(-7px);
             }
-            span:nth-of-type(3){
+
+            span:nth-of-type(3) {
                 transform: translateY(7px);
             }
+
+            display:none;
         }
+
+        .burger_list {
+            display: none;
+        }
+
         .h_name {
             font-size: 40px;
             font-family: 'Nothing You Could Do';
@@ -191,6 +207,7 @@
                 p {
                     width: 60%;
                     height: 20vw;
+
                     img {
                         width: 100%;
                         height: 100%;
@@ -216,280 +233,211 @@
         background-color: #ECF2FF;
         color: #0049F8;
 
-        .S_skill_main {
-            font-family: 'Do Hyeon', sans-serif;
+        .skills {
 
-            .familiar {
-                .familiar_img {
-                    position: relative;
-                    display:flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 50px;
-                    >div{
-                        width:10%;
-                        margin : 50px auto;
-                        img {
-                            width:100%;
-                            
-                        }
-                    }
-                }
+            margin: 100px 20px;
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px;
 
-                .familiar_text {
-
-                    position: absolute;
-                    top: -60px;
-                    right: 0;
-                    background-color: #FFFFFF;
-                    border: 2px solid #ADC3FF;
-                    border-radius: 10px;
-                    width: 80%;
-                    height: 50px;
-                    display: none;
-                    text-align: center;
-
-                    p {
-                        font-size: 1.5vw;
-                    }
-
-                    &.active {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                    }
-
-
-                }
-
-
-            }
-
-            .tried {
-                .tried_img {
-                    position: relative;
-                    display:flex;
-                    flex-wrap: wrap;
-                    justify-content: center;
-                    gap: 50px;
-                    >div{
-                        width:10%;
-                        margin : 50px auto;
-                        img {
-                            width:100%;
-                            
-                        }
-                    }
-                }
-
-                .tried_text {
-
-                    position: absolute;
-                    top: -60px;
-                    right: 0;
-                    background-color: #FFFFFF;
-                    border: 2px solid #ADC3FF;
-                    border-radius: 10px;
-                    width: 80%;
-                    height: 50px;
-                    display: none;
-
-                    p {
-                        font-size: 1.5vw;
-                    }
-
-                    &.active {
-                        display: flex;
-                        align-items: center;
-                        justify-content: center;
-
-                    }
-
-
-                }
-            }
-
-            .familiar,
-            .tried {
-                margin-top: 85px;
-                margin-left: 50px;
-
-                .familiar_img,
-                .tried_img {
-
-                    text-align: center;
-
-                    img {
-                        cursor: pointer;
-                        opacity: 0.5;
-                    }
-
-                    img:hover {
-                        opacity: 1;
-                    }
-                }
+            .skill_box {
+                padding: 10px;
+                border: 2px solid #0049F8;
+                background-color: white;
+                border-radius: 20px;
+                display: flex;
+                align-items: center;
+                justify-content: center;
 
                 p {
-                    font-size: 2.5vw;
-                    color: #000000;
-                }
-            }
+                    width: 80px;
 
-        }
-    }
-
-    .S_project {
-        .S_project_main {
-            color: #0049F8;
-            width: 60%;
-
-            h1 {
-                font-family: 'Do Hyeon', sans-serif;
-                margin-bottom: 50px;
-            }
-
-            .my_project_lt {
-                display: flex;
-                gap: 20px;
-                align-items: center;
-                margin: 100px 0;
-                justify-content: space-between;
-
-                &:nth-of-type(2n) {
-                    flex-direction: row-reverse;
-
-                    div {
-                        text-align: left;
-                    }
-                }
-
-                >div {
-                    color: #000000;
-                    text-align: right;
-                    font-size: 1vw;
-                    font-family: 'Noto Sans KR';
-                    width: 50%;
-                    line-height: 2;
-
-                    span {
-                        font-size: 2.5vw;
-                        font-family: 'Do Hyeon', sans-serif;
-                    }
-
-                    .page_link {
-                        display:flex;
-                        justify-content: end;
-                        gap:10px;
-                        p {
-                            width: 30px;
-                            height: 28px;
-
-                            img {
-                                width: 100%;
-                                height: 100%;
-                            }
-                        }
-                    }
-                }
-
-                .rotate {
-
-                    position: relative;
-                    transform-style: preserve-3d;
-                    width: 60%;
-                    height: 20vw;
-                    cursor: pointer;
-
-                    &.active {
-                        transform: perspective(600px) rotateY(180deg);
-                        transition: 1.5s;
-                    }
-
-                    #contents_back {
-                        text-align: left;
-                        border: 1px solid black;
-                        >span {
-                            font-size: 16px;
-                            font-family: "Noto Sans KR";
-                        }
-                    }
-
-                    p {
-                        position: absolute;
+                    img {
+                        display: block;
                         width: 100%;
                         height: 100%;
-                        overflow: hidden;
+                    }
+                }
+
+            }
+        }
+
+        .skill_explain {
+            padding: 10px;
+            margin: 0 20px;
+            border-left: 10px solid transparent;
+            border-image: linear-gradient(180deg, #9FA6FF 0%, #A7E1FF 100%);
+            border-image-slice: 1;
+
+            h2 {
+                background: linear-gradient(180deg, #9FA6FF 0%, #A7E1FF 100%);
+                color: transparent;
+                -webkit-background-clip: text;
+                font-size: 28px;
+            }
+
+            p {
+                line-height: 30px;
+                color: black;
+                margin: 20px 0;
+                font-size: 20px;
+            }
+        }
+    }
+}
+
+.S_project {
+    .S_project_main {
+        color: #0049F8;
+        width: 60%;
+
+        h1 {
+            font-family: 'Do Hyeon', sans-serif;
+            margin-bottom: 50px;
+        }
+
+        .my_project_lt {
+            display: flex;
+            align-items: center;
+            margin: 100px 0;
+            justify-content: space-between;
+            gap:50px;
+            &:nth-of-type(2n) {
+                flex-direction: row-reverse;
+
+                div {
+                    text-align: left;
+                }
+                
+            }
+
+            >div {
+                color: #000000;
+                text-align: right;
+                font-size: 1vw;
+                font-family: 'Noto Sans KR';
+                width: 60%;
+
+                h2 {
+                    font-size: 2vw;
+                    font-family: 'Do Hyeon', sans-serif;
+                }
+                >div{
+                    p:nth-of-type(1){
+                        margin : 20px 0 ;
+                    }
+                    img{
+                        width:30px;
+                    }
+                }
+
+            }
+
+            .rotate {
+                width: 50%;
+                >p {
+                    width: 100%;
+                    height: 15vw;
+
+                    a {
+                        width: 100%;
+                        height: 100%;
+                        display: block;
 
                         img {
                             width: 100%;
                             height: 100%;
-
                         }
                     }
-
-                    p:nth-of-type(2) {
-                        background-color: #FFFFFF;
-                        transform: translateZ(-1px) rotateY(180deg);
-
-                    }
-                }
-            }
-        }
-    }
-
-    .S_contact {
-        background: url("../public/images/me.png") center 250px / 150% no-repeat;
-        height: 100vh;
-
-
-        background-color: #0049F8;
-        color: #ECF2FF;
-
-        .S_contact_main {
-            h1 {
-                font-family: 'Do Hyeon', sans-serif;
-            }
-
-            p {
-                font-size: 1vw;
-                margin: 42px 0;
-                font-family: 'Noto Sans KR', sans-serif;
-            }
-
-            a {
-                font-size: 1vw;
-                color: #FFFFFF;
-                font-family: 'Noto Sans KR', sans-serif;
-
-                img {
-                    width: 2%;
                 }
             }
         }
     }
 }
 
+.S_contact {
+    // background: url("../public/images/me.png") center 250px / 150% no-repeat;
+    height: 100vh;
+    position: relative;
+
+    background-color: #0049F8;
+    color: #ECF2FF;
+
+    .S_contact_main {
+        h1 {
+            font-family: 'Do Hyeon', sans-serif;
+        }
+
+        p {
+            font-size: 1vw;
+            margin: 42px 0;
+            font-family: 'Noto Sans KR', sans-serif;
+        }
+
+        a {
+            font-size: 1vw;
+            color: #FFFFFF;
+            font-family: 'Noto Sans KR', sans-serif;
+
+            img {
+                width: 2%;
+            }
+        }
+    }
+    overflow: hidden;
+    .contact_card{
+        position: absolute;
+        top:50%;
+        z-index: 0;
+        display:flex;
+        flex-wrap: nowrap;
+        transform: rotate(-15deg) translateY(-100px);
+        animation: motion 3s linear 0s infinite;
+        &:hover{
+            animation: none;
+        }
+        }
+        .contact_card_contents{
+            border: 1px solid none;
+            background-color: #d9d9d9;
+            opacity: 0.2;
+            width:450px;
+            height:250px;
+            margin: 10px 10px;
+            
+        }
+        .contact_card_contents:nth-of-type(2){
+            opacity: 1;
+            img{
+                width:100%;
+                height:100%;
+            }
+        }
+    }
+
+/* Group 39 */
+
+
+
+
+
 
 //768~1024
-@include pad2{
-    #root{
-        header{
-            .burger_menu{
-                display:block;
+@include pad2 {
+    #root {
+        header {
+            .burger_menu {
+                display: block;
             }
-            nav{
-                display:none;
+
+            nav {
+                display: none;
             }
         }
     }
 }
 
 //480~768
-@include pad{
+@include pad {}
 
-}
-
-@include mobile{
-    
-}
+@include mobile {}

@@ -1,0 +1,54 @@
+[
+    {
+        "idx": 0,
+        "name": "HTML",
+        "src": "html.png",
+        "info" : "publishing"
+    },
+    {
+        "idx": 1,
+        "name": "CSS3",
+        "src": "css3.png"
+    },
+    {
+        "idx": 2,
+        "name": "SCSS",
+        "src": "sass.png"
+    },
+    {
+        "idx": 3,
+        "name": "JavaScript",
+        "src": "javascript.png"
+    },
+    {
+        "idx": 4,
+        "name": "React",
+        "src": "react.png"
+    },
+    {
+        "idx": 5,
+        "name": "Next.JS",
+        "src": "next.png"
+    },
+    {
+        "idx": 6,
+        "name": "MongoDB",
+        "src" : "mong.png"
+    },
+    {
+        "idx": 7,
+        "name": "Figma",
+        "src": "figma.png"
+    },
+    {
+        "idx": 8,
+        "name": "TypeScript",
+        "src": "typescript.png"
+    },
+    {
+        "idx": 9,
+        "name": "GitHub",
+        "src": "github.png"
+    }
+
+]

@@ -1,0 +1,36 @@
+[
+    {
+        "idx": 0,
+        "img": "happypub.png",
+        "title": "Happy Pub",
+        "contents": " HTML, SCSS, JaveScript 를 활용하여 만든 주류쇼핑몰 clone site입니다. 똑같은 페이지를 구성하기보다 기존 홈페이지에서의 보완점을 생각하여 UI/UX의 재구성, 반응형작업 등을 시도하여 만들었습니다.  ",
+        "b_contents": "한 페이지를 만들 때 어떠한 과정들을 거치는지 알게 된 좋은 프로젝트였습니다. 개인이 진행하는 프로젝트가 아닌 팀원들과 진행할 때의 주의점, 소통방법을 배울수 있었고,  프론트엔드 개발자가 되기 위한 최소한의 기본기를 늘릴수 있는 좋은 경험이 되었습니다.",
+        "gitlink" : "https://github.com/dnaals/project_happypub",
+        "projectlink" : "https://dnaals.github.io/project_happypub/",
+        "period" : "2023.12.15 ~ 2024.01.03",
+        "skill" : "HTML, SCSS, JavaScript"
+    },
+    {
+        "idx": 1,
+        "img": "portfolio.png",
+        "title": "포트폴리오",
+        "contents": "프론트엔드 취업을 위해 React를 활용하여 개발하였습니다. 한 페이지에서 편리한 정보 조회가 가능한 웹 사이트를 개발했습니다. 편리하고 효율적인 정보를 제공하기 위해 클릭 및 스크롤 이동을 주요 기능으로 개발했습니다.",
+        "b_contents": "후기 & 교훈 \n 면접관 분들께서 보기 편하게 만들기 위해 심플하고 깨끗한 이미지를 주기위한 UI/UX를 생각하여 컨셉을 잡고 시작했습니다. 리액트로 활용할 수 있는 문법들을 최대한 이용하고 지속적으로 업데이트가 가능하게 최대한 쉽게 제작했습니다. 사이트 배포를위해 vercel을 이용하여 배포를 진행했습니다. 이 프로젝트를 통하여 점점 더 발전하는 제 자신을 발견할 수 있었습니다. \n 사용기술 : React, SCSS, vercel \n 개발기간 : 2024.01.29 ~ 지속적으로 업데이트중 \n ",
+        "gitlink" : "https://naver.com",
+        "projectlink" : "https://naver.com",
+        "period" : " 2024.01.29 ~ 지속적으로 업데이트중 ",
+        "skill" : "React, SCSS, Vercel"
+
+    },
+    {
+        "idx": 2,
+        "img": "kookkook.png",
+        "title": "Kook Kook",
+        "contents": "Next.JS 14버전으로 진행한 프로젝트입니다. ",
+        "b_contents": "3번프로젝트 이미지 뒤에 넣을 내용",
+        "gitlink" : "https://naver.com",
+        "projectlink" : "https://naver.com",
+        "period" : "2024.02.20 ~ 2024.03.13",
+        "skill" : "Next.JS , MongoDB, SCSS"
+    }
+]
