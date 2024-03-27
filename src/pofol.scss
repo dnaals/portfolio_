@@ -44,7 +44,7 @@
         width: 60%;
 
         h1 {
-            font-size: 8vw;
+            font-size: 7vw;
         }
     }
 }
@@ -486,9 +486,12 @@
                 &.active{
                     display:block;
                     position: absolute;
-                    top:100%;
+                    top:140%;
                     right:0;
-                    
+                    p{
+                        text-align: right;
+                        margin:5px 0;
+                    }
                 }
             }
             nav {
