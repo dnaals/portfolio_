@@ -70,7 +70,7 @@
     }
 
     .arrow {
-        margin: 50px 0 50px 50%;
+        margin: 50px 0 50px 45%;
         cursor: pointer;
     }
 
@@ -535,6 +535,11 @@
 //480미만
 @include mobile {
     #root {
+        .arrow{
+            margin-left:45%;
+            width: 25px;
+            height:25px;
+        }
         header {
             .h_name{
                 font-size: 26px;
@@ -567,6 +572,135 @@
             }
             nav {
                 display: none;
+            }
+        }
+        .S_home{
+            .S_home_main{
+                >p:nth-of-type(1){
+                    font-size: 2.0rem;
+                    margin-bottom: 20px;
+                }
+                >p:nth-of-type(2){
+                    font-size: 0.7rem;
+                    margin-bottom: 20px;
+                }
+            }
+        }
+        .S_about{
+            .S_about_main{
+                h1{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-size: 0.7rem;
+                }
+                .introduce{
+                    margin-top: 60px;
+                    display:block;
+                    p{
+                        width:100%;
+                        height:150px;
+                    }
+                    ul{
+                        font-size: 0.8rem;
+                        margin:0;
+                        padding:0 15px;
+                    }
+                }
+            }
+        }
+        .S_skill{
+            .S_skill_main{
+                h1{
+                    font-size: 2.5rem;
+                }
+                .skills{
+                    margin:20px auto;
+                    gap:10px;
+                    .skill_box{
+                        p{
+                            width:40px;
+                        }
+                    }
+                }
+                .skill_explain{
+                    margin:20px 0;
+                    p{
+                        font-size: 0.7rem;
+                    }
+                }
+            }
+        }
+        .S_project{
+            .S_project_main{
+                h1{
+                    font-size: 2.5rem;
+                }
+                .my_project_lt{
+                    display:block;
+                    margin:70px 0;
+                    .rotate{
+                        width:100%;
+                        height:150px;
+                        p{
+                            height:100%;
+                        }
+                    }
+                    >div{
+                        width:100%;
+                        text-align: left;
+                        margin-top:30px;
+                        h2{
+                            font-size: 1.8rem;
+                        }
+                        div{
+                            p{
+                                font-size: 0.8rem;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        .S_contact{
+            .S_contact_main{
+                h1{
+                    font-size: 2.5rem;
+                }
+                p{
+                    font-size: 0.7rem;
+                }
+                a{
+                    font-size: 0.7rem;
+                    img{
+                        width:10px;
+                    }
+                }                
+            }
+            .contact{
+                height:50vh;
+                .card{
+                    transform: rotate(0deg);
+                    >div{
+                        figure{
+                            width:18%;
+                            img{
+                                width:300px;
+                            }
+                        }
+                    }
+                }
+                .card_detail{
+                    &.active{
+                        div{
+                            a{
+                                img{
+                                    width:300px;
+                                }
+                            }
+                        }
+                    }
+                }
             }
         }
 }
