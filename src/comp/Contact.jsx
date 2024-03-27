@@ -1,24 +1,67 @@
-import React from 'react';
+import React, { useState } from 'react';
 
 function Contact() {
+
+
+    let [click, setClick] = useState(false);
+    const imgClick = ()=>{
+        setClick(true);
+    }
+    const closeClick = ()=>{
+        setClick(false);
+    }
+
     return (
-        <div className='contact_card'>
-            <div className='contact_card_contents'>
-            
+    <div className='contact'>
+        <div className='card'>
+            <div>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
             </div>
-            <div className='contact_card_contents'>
-                <img src="/images/my.png" alt="" />
-            </div>
-            <div className='contact_card_contents'>
-            
-            </div>
-            <div className='contact_card_contents'>
-            
-            </div>
-            <div className='contact_card_contents'>
-            
+            <div>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+                <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
             </div>
         </div>
+        <div className='card'>
+        <div>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+        </div>
+        <div>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+        </div>
+        </div>
+        <div className='card'>
+        <div>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+        </div>
+        <div>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+            <figure onClick={imgClick}><img src="/images/my.png" alt="오류" /></figure>
+        </div>
+        </div>
+        <div className={click? 'card_detail active' :'card_detail'}>
+            <div>
+                <p onClick={closeClick}>닫기</p>
+                <a href="https://github.com/dnaals" target='_blink'><img src="/images/my.png" alt="aaa" /></a>
+            </div>
+        </div>
+    </div>
     );
 }
 
