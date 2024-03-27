@@ -7,7 +7,6 @@ import Contact from './comp/Contact';
 function App() {
 
   const menuRef = useRef([]);
-  const headRef = useRef();
   const [scrollPosition, setScrollPosition] = useState(0);
   const updateScroll = () => {
     setScrollPosition(window.scrollY);
@@ -58,6 +57,12 @@ function App() {
     menu.scrollIntoView({ behavior: "smooth" });
   }
 
+  const [burgerOn,setBurgerOn] = useState(false);
+  const burgerClick = ()=>{
+    setBurgerOn(!burgerOn);
+  }
+  console.log(burgerOn)
+
   const headColor = [
     { backgroundColor: '#0049F8', color: '#FFFFFF' },
     { backgroundColor: '#FFFFFF', color: '#0049F8' },
@@ -78,20 +83,21 @@ function App() {
 
   return (
     <>
-      <header ref={headRef} style={headColor[scrollBack()]}>
+      <header style={headColor[scrollBack()]}>
         <p onClick={() => { menuclick(menuRef.current[0]) }} className='h_name'>Songwoomin</p>
-        <div className='burger_menu'>
-          <span>ㅡ</span>
-          <span>ㅡ</span>
-          <span>ㅡ</span>
+        <div className='burger_menu' onClick={burgerClick}>
+          <p>ㅡ</p>
+          <p>ㅡ</p>
+          <p>ㅡ</p>
+          <div className={burgerOn? 'burger_list active':'burger_list'}>
+            <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
+            <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
+            <p onClick={() => menuclick(menuRef.current[2])} style={(scrollPosition >= menuScroll[2] && scrollPosition < menuScroll[3]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}> SKILL</p>
+            <p onClick={() => menuclick(menuRef.current[3])} style={(scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}} >PROJECT</p>
+            <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
         </div>
-        <div className='burger_list'>
-          <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
-          <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
-          <p onClick={() => menuclick(menuRef.current[2])} style={(scrollPosition >= menuScroll[2] && scrollPosition < menuScroll[3]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}> SKILL</p>
-          <p onClick={() => menuclick(menuRef.current[3])} style={(scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}} >PROJECT</p>
-          <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
         </div>
+        
         <nav>
           <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
           <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
