@@ -19,3 +19,10 @@ $pad2 : 1024px;
         @content;
     }
 }
+
+
+@mixin desk {
+    @media(min-width:$pad2) and (max-width:1460px) {
+        @content;
+    }
+}
