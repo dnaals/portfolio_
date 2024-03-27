@@ -1,4 +1,5 @@
 import data from "../data/project.json"
+import { motion } from 'framer-motion';
 function Project({ mouseE, mouseO }) {
 
     // {obj.b_contents.split('\n').map((line, index) => (
@@ -9,7 +10,15 @@ function Project({ mouseE, mouseO }) {
         <>
             {
                 data.map((obj, k) => (
-                    <div className='my_project_lt' key={k}>
+                    <motion.div
+                    initial={{ opacity: 0, x: k%2==0? -200 : 200 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: false }}
+                    transition={{
+                        ease: "easeInOut",
+                        duration: 1,
+                        y: { duration: 1 },
+                    }} className='my_project_lt' key={k}>
                         <div className='rotate'>
                             <p>
                                 <a href={obj.projectlink} target="_blank"><img src={`./images/${obj.img}`} onMouseMove={(e) => { mouseE(e) }} onMouseOut={() => { mouseO() }} />
@@ -26,7 +35,7 @@ function Project({ mouseE, mouseO }) {
                                 </div>
                             ))}
                         </div>
-                    </div>
+                    </motion.div>
                 ))
             }
         </>

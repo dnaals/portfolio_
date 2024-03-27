@@ -156,14 +156,23 @@ function App() {
         <img onClick={() => menuclick(menuRef.current[2])} className='arrow' src='./images/downBlue.png' />
       </motion.section>
 
-      <section ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
+      <motion.section
+        initial={{ opacity: 0, y: 100 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: false }}
+        transition={{
+          ease: "easeInOut",
+          duration: 2,
+          y: { duration: 1 },
+        }}
+        ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
         <div className='S_skill_main'>
           <h1>SKILL</h1>
           <Skill />
 
         </div>
         <img onClick={() => menuclick(menuRef.current[3])} className='arrow' src='./images/downBlue.png' />
-      </section>
+      </motion.section>
 
       <section ref={(el) => { menuRef.current[3] = el }} className='S_project'>
         <div className='S_project_main'>
