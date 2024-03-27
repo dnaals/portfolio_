@@ -1,14 +1,16 @@
 import React, { useState } from 'react';
 
-function Contact() {
+function Contact({setContactImg}) {
 
 
     let [click, setClick] = useState(false);
     const imgClick = ()=>{
         setClick(true);
+        setContactImg(click);
     }
     const closeClick = ()=>{
         setClick(false);
+        setContactImg(click);
     }
 
     const data = new Array(0,1,2);
