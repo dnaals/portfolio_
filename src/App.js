@@ -87,7 +87,7 @@ function App() {
     <>
       <header style={{ ...headColor[scrollBack()], display: contactImg? "flex":"none" }}>
         <p onClick={() => { menuclick(menuRef.current[0]) }} className='h_name'>Songwoomin</p>
-        <div className='burger_menu' onClick={burgerClick}>
+        <div className={burgerOn? 'burger_menu active' :'burger_menu'} onClick={burgerClick}>
           <p>ㅡ</p>
           <p>ㅡ</p>
           <p>ㅡ</p>
