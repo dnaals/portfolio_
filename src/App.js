@@ -143,7 +143,7 @@ function App() {
             계속 다양하게 변하는 웹개발 트랜드 속에서, 어떤 어려움 속에서도 포기하지않으며<br />
             다양한 시도와 함께 사용자 입장을 고려하며, 성실하게 발전하는 개발자가 되겠습니다.</p>
           <div className='introduce'>
-            <p><img src='/images/img1.png' /></p>
+            <p><img src='/images/aboutme.png' /></p>
             <ul>
               <li>송우민</li>
               <li>1996.01.05</li>
