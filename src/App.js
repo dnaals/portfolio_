@@ -82,13 +82,7 @@ function App() {
   }
 
   const [contactImg,setContactImg] = useState(true);
-console.log(
-  scrollPosition, 
-  menuScroll[1],
-   menuScroll[2],
-   menuScroll[3],
-   menuScroll[4]
-);
+
   return (
     <>
       <header style={{ ...headColor[scrollBack()], display: contactImg? "flex":"none" }}>

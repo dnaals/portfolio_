@@ -170,7 +170,7 @@ html{
                     text-align: center;
                     display:block;
                     position: absolute;
-                    top:160%;
+                    top:230%;
                     right:-60%;
                     &::before {
                         content: url('../public/images/asdasd.svg');
@@ -185,11 +185,13 @@ html{
                         // box-shadow: 0 0 1px white;
                     }
                 }
+                padding:20px 0;
                 p{
                     margin:0 auto;
                     font-family: 'Do Hyeon';
                     color:white;
-                    padding:15px 0;
+                    padding:10px 0;
+                    
                     width:50%;
                     opacity: 0.3;
                     &:hover{
