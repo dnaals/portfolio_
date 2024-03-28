@@ -14,7 +14,6 @@ function App() {
 
   const [menuScroll, setMenuScroll] = useState([]);
 
-  window.onresize = imageLoad;
 
   function imageLoad() {
     let menuBound = [
@@ -22,7 +21,7 @@ function App() {
       menuRef.current[1].offsetTop,
       menuRef.current[2].offsetTop,
       menuRef.current[3].offsetTop,
-      menuRef.current[4].offsetTop
+      menuRef.current[4].offsetTop -1
     ];
 
     setMenuScroll(menuBound);
@@ -37,6 +36,7 @@ function App() {
         if (idx == imgs.length - 1) imageLoad();
       }
     })
+    window.onresize = imageLoad;
   }, [])
 
 
@@ -54,7 +54,7 @@ function App() {
     }
   }
   const menuclick = (menu) => {
-    menu.scrollIntoView({ behavior: "smooth" });
+    menu.scrollIntoView({ block: "start" });
   }
 
   const [burgerOn,setBurgerOn] = useState(false);
@@ -82,7 +82,13 @@ function App() {
   }
 
   const [contactImg,setContactImg] = useState(true);
-
+console.log(
+  scrollPosition, 
+  menuScroll[1],
+   menuScroll[2],
+   menuScroll[3],
+   menuScroll[4]
+);
   return (
     <>
       <header style={{ ...headColor[scrollBack()], display: contactImg? "flex":"none" }}>
@@ -140,8 +146,8 @@ function App() {
         <img onClick={() => menuclick(menuRef.current[1])} className='arrow' src='./images/downWhite.png' />
       </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 100 }}
+      <section ref={(el) => { menuRef.current[1] = el }} className='S_about'>
+        <motion.div initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{
@@ -149,8 +155,7 @@ function App() {
           duration: 2,
           y: { duration: 1 },
         }}
-        ref={(el) => { menuRef.current[1] = el }} className='S_about'>
-        <div className='S_about_main'>
+        className='S_about_main'>
           <h1>ABOUT</h1>
           <p>새로운 일에 거부감없이 적응하며, 바른 인성을 갖추기 위해 노력하고,<br />
             BackEnd에도 관심을 가지는 등, 분야를 가리지 않고 적극적으로 개발에 대한 관심사를 넓혀나가고 있습니다.<br /><br />
@@ -168,12 +173,12 @@ function App() {
               <li>지능로봇과 졸업</li>
             </ul>
           </div>
-        </div>
+        </motion.div>
         <img onClick={() => menuclick(menuRef.current[2])} className='arrow' src='./images/downBlue.png' />
-      </motion.section>
+      </section>
 
-      <motion.section
-        initial={{ opacity: 0, y: 100 }}
+      <section ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
+        <motion.div initial={{ opacity: 0, y: 100 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: false }}
         transition={{
@@ -181,14 +186,13 @@ function App() {
           duration: 2,
           y: { duration: 1 },
         }}
-        ref={(el) => { menuRef.current[2] = el }} className='S_skill'>
-        <div className='S_skill_main'>
+        className='S_skill_main'>
           <h1>SKILL</h1>
           <Skill />
 
-        </div>
+        </motion.div>
         <img onClick={() => menuclick(menuRef.current[3])} className='arrow' src='./images/downBlue.png' />
-      </motion.section>
+      </section>
 
       <section ref={(el) => { menuRef.current[3] = el }} className='S_project'>
         <div className='S_project_main'>
