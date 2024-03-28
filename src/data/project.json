@@ -1,14 +1,14 @@
 [
     {
         "idx": 0,
-        "img": "happypub.png",
-        "title": "Happy Pub",
-        "contents": " HTML, SCSS, JaveScript 를 활용하여 만든 주류쇼핑몰 clone site입니다. 똑같은 페이지를 구성하기보다 기존 홈페이지에서의 보완점을 생각하여 UI/UX의 재구성, 반응형작업 등을 시도하여 만들었습니다.  ",
-        "b_contents": "한 페이지를 만들 때 어떠한 과정들을 거치는지 알게 된 좋은 프로젝트였습니다. 개인이 진행하는 프로젝트가 아닌 팀원들과 진행할 때의 주의점, 소통방법을 배울수 있었고,  프론트엔드 개발자가 되기 위한 최소한의 기본기를 늘릴수 있는 좋은 경험이 되었습니다.",
-        "gitlink" : "https://github.com/dnaals/project_happypub",
-        "projectlink" : "https://dnaals.github.io/project_happypub/",
-        "period" : "2023.12.15 ~ 2024.01.03",
-        "skill" : "HTML, SCSS, JavaScript"
+        "img": "kookkook.png",
+        "title": "Kook Kook",
+        "contents": "Next.JS 14버전으로 진행한 프로젝트입니다. ",
+        "b_contents": "3번프로젝트 이미지 뒤에 넣을 내용",
+        "gitlink" : "https://naver.com",
+        "projectlink" : "https://naver.com",
+        "period" : "2024.02.20 ~ 2024.03.13",
+        "skill" : "Next.JS , MongoDB, SCSS"
     },
     {
         "idx": 1,
@@ -24,13 +24,13 @@
     },
     {
         "idx": 2,
-        "img": "kookkook.png",
-        "title": "Kook Kook",
-        "contents": "Next.JS 14버전으로 진행한 프로젝트입니다. ",
-        "b_contents": "3번프로젝트 이미지 뒤에 넣을 내용",
-        "gitlink" : "https://naver.com",
-        "projectlink" : "https://naver.com",
-        "period" : "2024.02.20 ~ 2024.03.13",
-        "skill" : "Next.JS , MongoDB, SCSS"
+        "img": "happypub.png",
+        "title": "Happy Pub",
+        "contents": " HTML, SCSS, JaveScript 를 활용하여 만든 주류쇼핑몰 clone site입니다. 똑같은 페이지를 구성하기보다 기존 홈페이지에서의 보완점을 생각하여 UI/UX의 재구성, 반응형작업 등을 시도하여 만들었습니다.  ",
+        "b_contents": "한 페이지를 만들 때 어떠한 과정들을 거치는지 알게 된 좋은 프로젝트였습니다. 개인이 진행하는 프로젝트가 아닌 팀원들과 진행할 때의 주의점, 소통방법을 배울수 있었고,  프론트엔드 개발자가 되기 위한 최소한의 기본기를 늘릴수 있는 좋은 경험이 되었습니다.",
+        "gitlink" : "https://github.com/dnaals/project_happypub",
+        "projectlink" : "https://dnaals.github.io/project_happypub/",
+        "period" : "2023.12.15 ~ 2024.01.03",
+        "skill" : "HTML, SCSS, JavaScript"
     }
 ]
