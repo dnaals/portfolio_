@@ -54,7 +54,7 @@ function App() {
     }
   }
   const menuclick = (menu) => {
-    menu.scrollIntoView({ block: "start" });
+    menu.scrollIntoView({behavior:"smooth"  });
   }
 
   const [burgerOn,setBurgerOn] = useState(false);
