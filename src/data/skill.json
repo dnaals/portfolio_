@@ -49,6 +49,11 @@
         "idx": 9,
         "name": "GitHub",
         "src": "github.png"
+    },
+    {
+        "idx": 10,
+        "name": "Vue",
+        "src": "Vue.png"
     }
 
 ]

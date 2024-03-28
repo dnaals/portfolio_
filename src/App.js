@@ -113,13 +113,29 @@ function App() {
 
       <section ref={(el) => { menuRef.current[0] = el }} className='S_home'>
         <div className='S_home_main'>
-          <p>분석과 개발을<br />
+          <motion.p
+          initial={{ opacity: 0, x:-200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{
+              ease: "easeInOut",
+              duration: 1,
+              y: { duration: 1 },
+          }}>분석과 개발을<br />
             좋아하는<br />
-            <span>송우민</span>입니다.</p>
+            <span>송우민</span>입니다.</motion.p>
           <div className='line' />
-          <p>프론트엔드 개발자를 희망하고 있습니다. <br />
+          <motion.p
+          initial={{ opacity: 0, x:200 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: false }}
+          transition={{
+              ease: "easeInOut",
+              duration: 1,
+              y: { duration: 1 },
+          }}>프론트엔드 개발자를 희망하고 있습니다. <br />
             팀원들과의 호흡,소통을 중요시 하며 바른 인성을 갖추도록 노력하고 있습니다. <br />
-            제가 가진 최고의 강점인 성실함을 바탕으로 앞으로 나아가겠습니다. </p>
+            제가 가진 최고의 강점인 성실함을 바탕으로 앞으로 나아가겠습니다. </motion.p>
         </div>
         <img onClick={() => menuclick(menuRef.current[1])} className='arrow' src='./images/downWhite.png' />
       </section>
