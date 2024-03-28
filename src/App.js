@@ -92,11 +92,11 @@ function App() {
           <p>ㅡ</p>
           <p>ㅡ</p>
             <div className={burgerOn? 'burger_list active':'burger_list'}>
-              <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}} >HOME</p>
-              <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}>ABOUT</p>
-              <p onClick={() => menuclick(menuRef.current[2])} style={(scrollPosition >= menuScroll[2] && scrollPosition < menuScroll[3]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}}> SKILL</p>
-              <p onClick={() => menuclick(menuRef.current[3])} style={(scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) ? { borderBottom: '1px solid #0049F8', opacity: 1 } : {}} >PROJECT</p>
-              <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? { borderBottom: '1px solid #FFFFFF', opacity: 1 } : {}}>CONTACT</p>
+              <p onClick={() => menuclick(menuRef.current[0])} style={(scrollPosition >= menuScroll[0] && scrollPosition < menuScroll[1]) ? { opacity: 1 } : {}} >HOME</p>
+              <p onClick={() => menuclick(menuRef.current[1])} style={(scrollPosition >= menuScroll[1] && scrollPosition < menuScroll[2]) ? {opacity: 1 } : {}}>ABOUT</p>
+              <p onClick={() => menuclick(menuRef.current[2])} style={(scrollPosition >= menuScroll[2] && scrollPosition < menuScroll[3]) ? { opacity: 1 } : {}}> SKILL</p>
+              <p onClick={() => menuclick(menuRef.current[3])} style={(scrollPosition >= menuScroll[3] && scrollPosition < menuScroll[4]) ? { opacity: 1 } : {}} >PROJECT</p>
+              <p onClick={() => menuclick(menuRef.current[4])} style={(scrollPosition >= menuScroll[4]) ? {  opacity: 1 } : {}}>CONTACT</p>
             </div>
           
         </div>

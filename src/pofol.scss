@@ -160,11 +160,40 @@ html{
         }
             .burger_list {
                 display: none;
+                
                 &.active{
-                    background-color: rgba(230, 233, 255, 0.7);                    
+                    border: 1px solid rgba(255, 255, 255, 0.3);
+                    border-radius: 20px; 
+                    background-color: #0049F8;
+                    width:200px;
+                    text-align: center;
+                    display:block;
+                    position: absolute;
+                    top:160%;
+                    right:-60%;
+                    &::before {
+                        content: url('../public/images/asdasd.svg');
+                        position: absolute;
+                        top:0;
+                        right:20px;
+                        // border:10px solid transparent;
+                        // border-bottom-color:#0049F8 ;
+                        transform: translateY(-78%);
+                        filter: drop-shadow(0px -1px 0px  rgba(255, 255, 255, 0.3));
+                        // border: 1px solid rgba(255, 255, 255, 0.3);
+                        // box-shadow: 0 0 1px white;
+                    }
                 }
                 p{
+                    margin:0 auto;
                     font-family: 'Do Hyeon';
+                    color:white;
+                    padding:15px 0;
+                    width:50%;
+                    opacity: 0.3;
+                    &:hover{
+                        opacity: 1;
+                    }
                 }
             }
         
@@ -542,18 +571,7 @@ html{
                 }
                 
             }
-            .burger_list{
-                &.active{
-                    display:block;
-                    position: absolute;
-                    top:140%;
-                    right:0;
-                    p{
-                        text-align: right;
-                        margin:5px 0;
-                    }
-                }
-            }
+            .burger_list{}
             nav {
                 display: none;
             }
@@ -627,15 +645,7 @@ html{
                 }
             }
             .burger_list{
-                &.active{
-                    display:block;
-                    position: absolute;
-                    top:100%;
-                    right:0;
-                }
                 p{
-                    text-align: right;
-                    margin:5px 0;
                     font-size: 0.9rem;
                 }
             }
@@ -757,15 +767,7 @@ html{
                 }
             }
             .burger_list{
-                &.active{
-                    display:block;
-                    position: absolute;
-                    top:100%;
-                    right:0;
-                }
                 p{
-                    text-align: right;
-                    margin:5px 0;
                     font-size: 0.8rem;
                 }
             }
