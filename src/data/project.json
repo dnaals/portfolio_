@@ -3,11 +3,11 @@
         "idx": 3,
         "img": "kookkook.png",
         "title": "Kook Kook",
-        "contents": "Next.JS 14버전으로 진행한 프로젝트입니다. ",
-        "gitlink" : "https://naver.com",
-        "projectlink" : "https://naver.com",
+        "contents": "Next.JS 14버전으로 진행한 레시피제공 어플리케이션 프로젝트입니다. 레시피를 쉽게 찾아볼 수 있는 검색기능, 자신만의 레시피를 등록할수있는 레시피등록기능을 기획했습니다. 레시피API 및 유튜브와 구글,네이버 로그인API를 활용하여 개발했습니다. ",
+        "gitlink" : "https://github.com/dnaals/kookkook",
+        "projectlink" : "https://kookkook.vercel.app/home",
         "period" : "2024.02.20 ~ 2024.03.13",
-        "skill" : "Next.JS , MongoDB, SCSS"
+        "skill" : "Next.js, TypeScript, MongoDB, SCSS, FireBase, Vercel"
     },
     {
         "idx": 2,
