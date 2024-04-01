@@ -37,7 +37,7 @@
         "contents": " HTML, SCSS, JaveScript 를 활용하여 만든 clone site입니다. 첫 제작 page이며, 완벽하게 따라해보자 라는 생각으로 제작하였으며, 반응형 작업까지 진행했습니다.",
         "gitlink" : "https://github.com/dnaals/clone_site",
         "projectlink" : "https://dnaals.github.io/clone_site/",
-        "period" : "2023.12.15 ~ 2024.01.03",
+        "period" : "2023.12.13",
         "skill" : "HTML, SCSS, JavaScript"
     }
 ]
