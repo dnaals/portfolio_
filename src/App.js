@@ -200,7 +200,7 @@ function App() {
         <div className='S_contact_main'>
           <h1>CONTACT US</h1>
           <p>"열정, 성실, 올바른 인성"을 중심으로 포기하지않고 노력하는 개발자가 되겠습니다.</p>
-          <a href='./file/이력서.hwp' download>이력서 다운로드 <img src='./images/rightarrow.png' /> </a>
+          <a href='./file/이력서.pdf' download>이력서 다운로드 <img src='./images/rightarrow.png' /> </a>
         </div>
         <Contact setContactImg={setContactImg} />
       </section>
