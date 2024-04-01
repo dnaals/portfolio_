@@ -14,8 +14,8 @@
         "img": "portfolio.png",
         "title": "포트폴리오",
         "contents": "프론트엔드 취업을 위해 React를 활용하여 개발하였습니다. 한 페이지에서 편리한 정보 조회가 가능한 웹 사이트를 개발했습니다. 편리하고 효율적인 정보를 제공하기 위해 클릭 및 스크롤 이동을 주요 기능으로 개발했습니다.",
-        "gitlink" : "https://naver.com",
-        "projectlink" : "https://naver.com",
+        "gitlink" : "https://github.com/dnaals/portfolio_",
+        "projectlink" : "https://portfolio-fawn-three-33.vercel.app/",
         "period" : " 2024.01.29 ~ 지속적으로 업데이트중 ",
         "skill" : "React, SCSS, Vercel"
 
