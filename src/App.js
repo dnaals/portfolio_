@@ -20,7 +20,7 @@ function App() {
       menuRef.current[0].offsetTop,
       menuRef.current[1].offsetTop,
       menuRef.current[2].offsetTop,
-      menuRef.current[3].offsetTop,
+      menuRef.current[3].offsetTop-1,
       menuRef.current[4].offsetTop -1
     ];
 
@@ -28,6 +28,8 @@ function App() {
 
     window.addEventListener("scroll", updateScroll);
   }
+  console.log(menuScroll);
+console.log(scrollPosition,"asd");
 
   useEffect(() => {
     const imgs = document.querySelectorAll('img');
