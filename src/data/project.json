@@ -1,5 +1,15 @@
 [
     {
+        "idx": 4,
+        "img": "game.png",
+        "title": "Game",
+        "contents": "Vue.js를 공부하며 진행했던 가벼운 프로젝트입니다. Vue의 문법, 함수들을 이해하고 page생성을 해보며 해당 언어의 이해도를 높였습니다.",
+        "gitlink" : "https://github.com/dnaals/vue-game",
+        "projectlink" : "https://vue-game-beryl.vercel.app/",
+        "period" : "2024.04.08 ~ 2024.04.09",
+        "skill" : "Next.js, TypeScript, MongoDB, SCSS, FireBase, Vercel"
+    },
+    {
         "idx": 3,
         "img": "kookkook.png",
         "title": "Kook Kook",
