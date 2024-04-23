@@ -28,8 +28,6 @@ function App() {
 
     window.addEventListener("scroll", updateScroll);
   }
-  console.log(menuScroll);
-console.log(scrollPosition,"asd");
 
   useEffect(() => {
     const imgs = document.querySelectorAll('img');

@@ -54,6 +54,11 @@
         "idx": 10,
         "name": "Vue",
         "src": "vue.png"
+    },
+    {
+        "idx": 11,
+        "name": "MySql",
+        "src": "mysql.png"
     }
 
 ]
