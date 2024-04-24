@@ -22,7 +22,7 @@
     {
         "idx": 3,
         "img": "kookkook.png",
-        "title": "Kook Kook",
+        "title": "Kook Kook(팀 프로젝트)",
         "contents": "Next.JS 14버전으로 진행한 레시피제공 어플리케이션 프로젝트입니다. 레시피를 쉽게 찾아볼 수 있는 검색기능, 자신만의 레시피를 등록할수있는 레시피등록기능을 기획했습니다. 레시피API 및 유튜브와 구글,네이버 로그인API를 활용하여 개발했습니다. ",
         "gitlink" : "https://github.com/dnaals/kookkook",
         "projectlink" : "https://kookkook.vercel.app/",
@@ -43,7 +43,7 @@
     {
         "idx": 1,
         "img": "happypub.png",
-        "title": "Happy Pub",
+        "title": "Happy Pub(팀 프로젝트)",
         "contents": " HTML, SCSS, JaveScript 를 활용하여 만든 주류쇼핑몰 clone site입니다. 똑같은 페이지를 구성하기보다 기존 홈페이지에서의 보완점을 생각하여 UI/UX의 재구성, 반응형작업 등을 시도하여 만들었습니다.  ",
         "gitlink" : "https://github.com/dnaals/project_happypub",
         "projectlink" : "https://dnaals.github.io/project_happypub/",
