@@ -7,7 +7,7 @@
         "gitlink" : "https://github.com/dnaals/memo_rit",
         "projectlink" : "https://nextjs-todo-project-eta.vercel.app/",
         "period" : "2024.04.10 ~ 2024.04.23",
-        "skill" : "Next.js, TypeScript, SCSS, MySql, FireBase, Vercel"
+        "skill" : "Next.js, TypeScript, SCSS, MySql, FireBase, Vercel, Zustand"
     },
     {
         "idx": 4,
@@ -27,7 +27,7 @@
         "gitlink" : "https://github.com/dnaals/kookkook",
         "projectlink" : "https://kookkook.vercel.app/",
         "period" : "2024.02.20 ~ 2024.03.13",
-        "skill" : "Next.js, TypeScript, MongoDB, SCSS, FireBase, Vercel"
+        "skill" : "Next.js, TypeScript, MongoDB, SCSS, FireBase, Vercel, Zustand"
     },
     {
         "idx": 2,
