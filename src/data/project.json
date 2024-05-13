@@ -3,9 +3,9 @@
         "idx": 5,
         "img": "memorit.png",
         "title": "Memo-Rit",
-        "contents": "KookKook 프로젝트를 하며 아쉬웠던 부분을 혼자 생각했습니다. 어떤부분이 아쉬운지 어떤 작품을 만들어야 보완할 수 있을지 생각해보며 프로젝트를 진행했습니다.",
+        "contents": "KookKook 프로젝트를 하며 아쉬웠던 부분을 혼자 생각하며 핸드폰의 메모장을 참고하여 Figma로 디자인 후에 진행하였습니다.",
         "gitlink" : "https://github.com/dnaals/memo_rit",
-        "projectlink" : "https://nextjs-todo-project-eta.vercel.app/",
+        "projectlink" : "https://memo-rit.vercel.app/",
         "period" : "2024.04.10 ~ 2024.04.23",
         "skill" : "Next.js, TypeScript, SCSS, MySql, FireBase, Vercel, Zustand"
     },
