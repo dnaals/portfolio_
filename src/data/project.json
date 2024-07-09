@@ -3,7 +3,7 @@
         "idx": 5,
         "img": "memorit.png",
         "title": "Memo-Rit",
-        "contents": "팀프로젝트를 하며 아쉬웠던 부분을 되짚어보고, CRUD를 활용해보고자 MySql을 활용해 메모장을 만들었습니다. CLOUDTYPE을 이용해 서버를 연동했으나 하루에 한번씩 서버가 종료되어 오전8시30분~09시에 서버를 작동시키고있습니다.",
+        "contents": "팀프로젝트를 하며 아쉬웠던 부분을 되짚어보고, CRUD를 활용해보고자 MySql을 활용해 메모장을 만들었습니다. MySql 배포를 CLOUDTYPE을 이용해 서버를 연동했으나 하루에 한번씩 서버가 종료되어 오전8시30분~09시에 서버를 작동시키고있습니다.",
         "gitlink" : "https://github.com/dnaals/memo_rit",
         "projectlink" : "https://memo-rit.vercel.app/",
         "period" : "2024.04.10 ~ 2024.04.23",
