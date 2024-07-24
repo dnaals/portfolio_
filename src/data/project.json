@@ -2,7 +2,7 @@
     {
         "idx": 6,
         "img": "allbirds.png",
-        "title": "Allbords(clone)",
+        "title": "Allbirds(clone)",
         "contents": "반응형웹에 대해 공부하고 다시 제작해본 클론사이트 입니다. JS와 스와이퍼 구현을 진행하고있습니다.",
         "gitlink" : "https://github.com/dnaals/allbirds",
         "projectlink" : "https://dnaals.github.io/allbirds/",
