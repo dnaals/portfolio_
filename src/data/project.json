@@ -1,5 +1,15 @@
 [
     {
+        "idx": 7,
+        "img": "movBox.png",
+        "title": "Mov:Box [모브박스]",
+        "contents": "박스오피스 오픈 API를 사용해 메인, 상세화면 및 영화차트 등 사용자 중심의 UI / UX 개발하고, 회원가입 및 로그인 서비스가 가능한 영화예매 사이트를 구현하였습니다.",
+        "gitlink" : "https://github.com/dnaals/mov_box",
+        "projectlink" : "mov-box-tau.vercel.app",
+        "period" : "2024.08 ~ 2024.10",
+        "skill" : "Next.js , SCSS, MySql, Vercel, Zustand"
+    },
+    {
         "idx": 6,
         "img": "allbirds.png",
         "title": "Allbirds(clone)",
